@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <% include partials/header.ejs %>
+    <title>New book</title>
+</head>
+<body>
+<div class="container p-4">
+    <form target="/new-book" method="post" class="card card-body">
+        <div class="form-group">
+            <label for="title">title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Entry a new title" autofocus
+                   required>
+        </div>
+        <div class="form-group">
+            <label for="author">author</label>
+            <input type="text" class="form-control" name="author" id="author" placeholder="Author"
+                   required>
+        </div>
+        <div class="form-group">
+            <label for="image">image</label>
+            <input type="text" class="form-control" name="image" id="image" placeholder="http://website.com"
+                   required>
+        </div>
+        <div class="form-group">
+            <label for="description">description</label>
+            <textarea class="form-control" name="description" id="description" rows="2" required></textarea>
+        </div>
+        <input type="button" value="Save book" class="btn btn-primary">
+    </form>
+</div>
+</body>
+</html>
